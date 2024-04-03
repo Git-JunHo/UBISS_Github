@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="mainpage.css">
+        <title>UBISS</title>
+    </head>
+    <body>      
+        <div class="wrap">
+            <div class="intro_bg">
+                <div class="header">
+                    <div class="searcharea">
+                        <form>
+                            <input type="search" placeholder="search">
+                            <span>검색</span>
+                        </form>
+                    </div>
+                    <ul class="nav">
+                        <li><a href="https://www.ubaseinternational.com/">HOME</a></li>
+                        <li><a href="https://erp.ubaseinternational.com/">UBI</a></li>
+                        <li><a href="file://10.100.102.22/%EC%A0%84%EC%82%B0/%EC%A4%80%ED%98%B8%ED%8F%B4%EB%8D%94/ubiss/mainpage.html">UBISS</a></li>
+                        <li><a href="https://www.ubaseinternational.com/business/introduction.asp">INTRODUCTION</a></li>
+                    </ul>        
+                </div>
+                <div class="intro_text">
+                    <h1>UBISS</h1>
+                    <h4>UBI factory Smart System</h4>
+                </div>         
+            </div>
+            </div>
+            <!-- intro end -->
+            <!-- AJAX 연동 해보기 -->
+            
+            <!-- <div id="dataContainer">Loading...</div>
+            <script>
+                // 예시로 사용할 가상의 데이터
+                var data = {
+                    success: true,
+                    message: "Data successfully loaded!"
+                };
+                
+                // 데이터를 가져와서 HTML에 반영
+                function fetchData() {
+                    setTimeout(function() {
+                        // 가상의 AJAX 요청
+                        // 이 부분에서 실제 서버에서 데이터를 가져오는 AJAX 요청이 이루어질 수 있습니다.
+                        
+                        // 받은 데이터를 처리
+                        if (data.success) {
+                            document.getElementById("dataContainer").textContent = data.message;
+                            document.getElementById("dataContainer").classList.add("success");
+                        } else {
+                            document.getElementById("dataContainer").textContent = "Failed to load data.";
+                            document.getElementById("dataContainer").classList.add("error");
+                        }
+                    }, 2000); // 2초 후에 실행 (가상의 지연 시간)
+                }
+                
+                // fetchData 함수 호출
+                fetchData();
+                </script> -->
+
+            <ul class="status">
+                <li>
+                    <div>
+                        <div class="contents1">창고 관리</div>
+                        <div class="contents2">5,445</div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="contents1">원단, 재단관리</div>
+                        <div class="contents2">422,424</div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="contents1">생산 계획</div>
+                        <div class="contents2">300,000+</div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="contents1">생산 추적</div>
+                        <div class="contents2">250,370</div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div class="contents1">품질 관리</div>
+                        <div class="contents2">$ 76,558</div>
+                    </div>
+                </li>                
+            </ul>
+            <!-- status end  -->
+
+            <div class="main_text0">
+                <h1>Production Status</h1>
+                <div class="contents2">FlowChart</div>
+
+                <ul class="icons">
+                    <li>
+                        <div class="icon_img">
+                            <a href="https://erp.ubaseinternational.com/hypertexERP/warehouse/">
+                            <img src="image/warehouse.png" alt="warehouse icon">
+                            </a>
+                        </div>
+                        <div class="contents1_bold">
+                            WAREHOUSE
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon_img">
+                            <a href="https://erp.ubaseinternational.com/hypertexERP/warehouse/inspect/fabric">
+                            <img src="image/inspect.png" alt="inspect icon">
+                            </a>
+                        </div>
+                        <div class="contents1_bold2">
+                            INSPECT
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon_img">
+                            <a href="#">
+                            <img src="image/cutting.png" alt="cutting icon">
+                            </a>
+                        </div>
+                        <div class="contents1_bold">
+                            CUTTING
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon_img">
+                            <a href="#">
+                            <img src="image/sewing.png" alt="sewing icon">
+                            </a>
+                        </div>
+                        <div class="contents1_bold">
+                            SEWING
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icon_img">
+                            <a href="#">
+                            <img src="image/packing.png" alt="packing icon">
+                            </a>
+                        </div>
+                        <div class="contents1_bold">
+                            PACKING
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p>ⓒ UBASE INTERNATIONAL, INC. ALL RIGHTS RESERVED.</p>
+        </div>
+    </body>
+</html>
