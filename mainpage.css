@@ -5,7 +5,7 @@
     border-collapse: collapse;
     margin: 0px;
     padding: 0px;                
-    color: #000;
+    /* color: #fff; */
 }
 
 .mainpage_bg {
@@ -66,7 +66,7 @@
 }
 
 .navbar_links {
-    margin-right: 10%;
+    margin-right: 7.7%;
     
 
 }
@@ -92,7 +92,7 @@
     left: 50%;
     width: 0;
     height: 3px;
-    background-color: #792626;
+    background-color: #fff;
     transform: scale(1.2) translateY(3px);
     transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
     
@@ -253,7 +253,7 @@
 
 .status  li {  
     flex: 1;
-    height: 130px;    
+    height: 120px;    
 }
 
 .status li div,
@@ -338,7 +338,7 @@
 
 .sub_title {
     width: 100%;
-    height: 670px;
+    height: 570px;
     margin-top: -132px;
     background: rgb(227, 226, 226);
 }
@@ -368,18 +368,24 @@
 
 .icons > li {
     flex: 5;
-    height:  280px;
+    height:  260px;
     background: white;
     margin-top: 50px;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
     border-radius: 10px;
     transition: transform 0.3s;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .icons > li:hover {
     transform: scale(1.2);
 }
+
+/* .icons > li:not(:last-child){
+    margin-right: 20px;
+} */
 
 
 .icons > li > .icon_img {
@@ -398,9 +404,8 @@
     transform: scale(1.2); /* 호버 시 아이콘 크기 확대 */
 }
 
-.icons > li:not(:last-child){
-    margin-right: 20px;
-}
+
+
 
 .icons > li > .icon_menu {
     font-size:18px;
@@ -411,7 +416,7 @@
 .icons > li > .icon_menu_ins {
     font-size:18px;
     font-weight: bold;
-    margin-top: 30px;
+    margin-top: 28px;
 }
 
 .footer > p {
@@ -443,12 +448,49 @@
         width: 100%;
     }
 
+    .icons > li {
+        flex: 5;
+        height:  225px;
+        background: white;
+        margin-top: 50px;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        transition: transform 0.3s;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .icons > li > .icon_menu {
+        font-size:18px;
+        font-weight: bold;
+        margin-top:5px;
+    }
+    
+    .icons > li > .icon_menu_ins {
+        font-size:18px;
+        font-weight: bold;
+        margin-top: 25px;
+    }
+
+    .sub_title {
+        width: 100%;
+        height: 1620px;
+        margin-top: -80px;
+        background: rgb(227, 226, 226);
+        
+    }
+
 }
 
-@media screen and (max-width:991.98px) {
-    /* 모바일 버전 CSS 입력*/
+@media screen and (max-width:800px) {   
+    /* 모바일 버전 CSS 입력 991.98 */
     .navbar_main {
         display: none;
+    }
+
+    .status { 
+        width: 100%;
     }
 
     .status ul { 
@@ -459,8 +501,12 @@
 
     .status ul li {
         height: 50px;
-        min-height: 50px;
-        line-height: 50px;
+        min-height: 10px;
+        line-height: 0px;
+        /* display: flex; */
+        justify-content: left;
+        align-items: center;
+
     }
 
     .status ul dl { 
@@ -500,8 +546,29 @@
         margin-top: 10px;
     }
 
+    .sub_title {
+        width: 100%;
+        height: 1620px;
+        margin-top: -80px;
+        background: rgb(227, 226, 226);
 
-    .footer > P {
-        bottom: 0;
+        
     }
+
+    .icons > li {
+        flex: 5;
+        height:  225px;
+        background: white;
+        margin-top: 50px;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        transition: transform 0.3s;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    /* .footer > P {
+        margin-bottom: -100px;
+    } */
 }
