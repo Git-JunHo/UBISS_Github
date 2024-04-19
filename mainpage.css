@@ -394,11 +394,11 @@
     
 }
 
-.icons > li > .icon_img_ins {
+/* .icons > li > .icon_img_ins {
     margin-top: 55px;
-    transition: transform 0.3s; /* 호버 효과를 부드럽게 만들기 위한 transition 추가 */
+    transition: transform 0.3s; /* 호버 효과를 부드럽게 만들기 위한 transition 추가 
     
-}
+} */
 
 .icons > li > .icon_img:hover {
     transform: scale(1.2); /* 호버 시 아이콘 크기 확대 */
@@ -413,11 +413,11 @@
     margin-top: 18px;
 }
 
-.icons > li > .icon_menu_ins {
+/* .icons > li > .icon_menu_ins {
     font-size:18px;
     font-weight: bold;
     margin-top: 28px;
-}
+} */
 
 .footer > p {
     font-size: 15px;
