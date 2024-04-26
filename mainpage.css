@@ -8,6 +8,11 @@
     /* color: #fff; */
 }
 
+.wrap {
+    width: 960px; /* 1024px 뷰포트 내에 맞추도록 폭 조정 */
+    margin: 0 auto; /* 컨테이너를 가운데 정렬 */
+}
+
 .mainpage_bg {
     background:url("image/bg_sub1.png") no-repeat 50%;
     background-size: cover;
