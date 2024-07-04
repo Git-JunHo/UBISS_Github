@@ -295,7 +295,7 @@
 
 /* 모바일 버전 (max-width: 768px) */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .mainpage_bg {
         background: url("image/bg_sub1.png") no-repeat center center;
         background-size: cover;
