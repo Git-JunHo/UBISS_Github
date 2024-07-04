@@ -14,7 +14,6 @@
     margin: 0 auto; /* 컨테이너를 가운데 정렬 */
 }
 
-
 @media screen and (max-width: 1024px) {
     .wrap {
         width: 100%; /* 뷰포트 너비가 1024px보다 작을 때는 컨테이너 너비를 100%로 설정 */
@@ -26,7 +25,6 @@
         height: 390px;
         text-align: center; /* 수정: top -> center */
     }
-  
 
     .navbar_main {
         width: 100%;
@@ -115,7 +113,6 @@
         z-index: 1000; /* 다른 요소들 위에 위치하도록 z-index 추가 */
     }
 
-
     .navbar_menu {
         position: fixed;
         top: 0;
@@ -135,7 +132,7 @@
     }
 
     .navbar_menu a {
-        font-size: 1px; /* 수정: font-size 1px -> 1rem */
+        font-size: 1rem; /* 수정: font-size 1px -> 1rem */
         margin-left: 1rem;
         margin-bottom: 3rem;
         text-decoration: none;
@@ -183,11 +180,10 @@
     }
 
     .header_title {
-        width: 2%;
+        width: 100%;
         margin: 23px auto 100px auto;
         color: #FFF;
         text-align: right; /* 우측 정렬 */
-        
     }
 
     .header_title > h1 {
@@ -281,17 +277,21 @@
         transform: scale(1.2);
     }
 
+    /* .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center; /* 내부의 p 태그에 대한 텍스트 정렬 
+    } */
+
     .footer > p {
         font-size: 15px;
-        text-align: center;
         margin: auto;
+        text-align: center;
     }
-
 }
 
-
 /* 모바일 버전 (max-width: 800px) */
-
 @media screen and (max-width: 800px) {
     .mainpage_bg {
         background: url("image/bg_sub1.png") no-repeat center center;
@@ -299,7 +299,6 @@
         height: 390px;
         text-align: center; /* 수정: top -> center */
     }
-  
 
     .navbar_main {
         width: 100%;
@@ -388,7 +387,6 @@
         z-index: 1000; /* 다른 요소들 위에 위치하도록 z-index 추가 */
     }
 
-
     .navbar_menu {
         position: fixed;
         top: 0;
@@ -408,7 +406,7 @@
     }
 
     .navbar_menu a {
-        font-size: 1px; /* 수정: font-size 1px -> 1rem */
+        font-size: 1rem; /* 수정: font-size 1px -> 1rem */
         margin-left: 1rem;
         margin-bottom: 3rem;
         text-decoration: none;
@@ -424,7 +422,7 @@
     }
 
     .status {
-        width: 650px;
+        width: 87%;
         margin: auto;
     }
 
@@ -456,11 +454,10 @@
     }
 
     .header_title {
-        width: 2%;
+        width: 100%;
         margin: 23px auto 100px auto;
         color: #FFF;
         text-align: right; /* 우측 정렬 */
-        
     }
 
     .header_title > h1 {
@@ -560,64 +557,9 @@
         width: 100%;
         text-align: center; /* 내부의 p 태그에 대한 텍스트 정렬 */
     }
-    
+
     .footer > p {
         font-size: 15px;
         margin: auto;
-    }
-
-}
-
-
-/* 모바일 버전 (max-width: 600px) */
-@media screen and (max-width: 600px) {
-    .wrap {
-        width: 100%; /* 뷰포트 너비가 1024px보다 작을 때는 컨테이너 너비를 100%로 설정 */
-    }
-
-    .navbar_main {
-        display: none;
-    }
-
-    .status {
-        width: 90px;
-        margin: auto;
-    }
-
-    .status ul {
-        display: block;
-        top: 0;
-        margin-top: 10px;
-    }
-
-    .status ul li {
-        height: auto;
-        min-height: 10px;
-        line-height: 1.5;
-        justify-content: left;
-        align-items: center;
-    }
-
-    .status ul dl {
-        display: flex;
-        top: 0;
-        margin-top: 10px;
-    }
-
-    .status ul dl dt,
-    .status ul dl dd {
-        padding: 5px 10px;
-        text-align: center; /* 수정: dt, dd text-align */
-    }
-
-    .status li:not(:last-child) div,
-    .status li:not(:last-child) dl {
-        border-right: none;
-    }
-
-    .status ul div .title,
-    .status ul div .value {
-        padding: 5px 10px;
-        text-align: center;
     }
 }
