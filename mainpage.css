@@ -18,7 +18,7 @@
 .mainpage_bg {
     background: url("image/bg_sub1.png") no-repeat center center;
     background-size: cover;
-    height: 25rem; /* 전체 화면 높이에 맞게 설정 */
+    height: 32rem; /* 전체 화면 높이에 맞게 설정 */
     text-align: center; /* 가운데 정렬 */
 }
 
@@ -27,7 +27,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     color: #fff;
     z-index: 999;
     animation: navbarBottom 1s forwards;
@@ -35,16 +35,18 @@
 
 .navbar_links {
     margin-right: 2%;
+    
 }
 
 .navbar_links > a {
     text-decoration: none;
     color: #fff;
-    margin-right: 1.5rem;
-    font-size: 1.3rem;
-    font-weight: 800;
+    margin-right: 2.8rem;
+    font-size: 1.8rem;
+    font-weight: 450;
     position: relative;
     padding: 0.5rem 0;
+    
 }
 
 .navbar_links a:last-child {
@@ -58,7 +60,7 @@
     left: 50%;
     width: 0;
     height: 3px;
-    background-color: #fff;
+    background-color: #ffffff;
     transform: scale(1.2) translateY(3px);
     transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
 }
@@ -128,8 +130,8 @@
 }
 
 .navbar_menu a {
-    font-size: 1rem; /* 수정: font-size 1px -> 1rem */
-    margin-left: 1rem;
+    font-size: 2rem; /* 수정: font-size 1px -> 1rem */
+    margin-left: 4rem;
     margin-bottom: 3rem;
     text-decoration: none;
 }
@@ -178,23 +180,23 @@
 
 .header_title {
     width: 100%;
-    margin: 23px auto 100px auto;
+    margin: 40px auto 100px auto;
     color: #FFF;
     text-align: right; /* 우측 정렬 */
 }
 
 .header_title > h1 {
-    font-size: 55px;
+    font-size: 60px;
     position: absolute;
-    right: 20px; /* 우측 정렬 */
+    right: 40px; /* 우측 정렬 */
     animation: slide 1.2s ease-out;
 }
 
 .header_title > h4 {
-    margin-top: 70px;
-    font-size: 25px;
+    margin-top: 80px;
+    font-size: 30px;
     position: absolute;
-    right: 20px; /* 우측 정렬 */
+    right: 40px; /* 우측 정렬 */
     animation: slide 1.2s ease-out;
 }
 
@@ -204,14 +206,14 @@
         opacity: 0;
     }
     to {
-        right: 20px;
+        right: 40px;
         opacity: 1;
     }
 }
 
 .sub_title {
     width: 100%;
-    height: 510px;
+    height: 550px;
     margin-top: -132px;
     background: rgb(227, 226, 226);
 }
@@ -287,7 +289,7 @@
 }
 
 
-/* 테블릿 가로 버전 (max-width: 110px) */
+/* 테블릿 가로 버전 (max-width: 1100px) */
 @media screen and (max-width: 1100px) {
     .wrap {
         width: 1024px; /* 1024px 뷰포트 내에 맞추도록 폭 조정 */
