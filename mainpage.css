@@ -41,9 +41,9 @@
 .navbar_links > a {
     text-decoration: none;
     color: #fff;
-    margin-right: 2.8rem;
-    font-size: 1.8rem;
-    font-weight: 450;
+    margin-right: 2rem;
+    font-size: 1.7rem;
+    font-weight: 400;
     position: relative;
     padding: 0.5rem 0;
     
@@ -59,7 +59,7 @@
     bottom: -1px;
     left: 50%;
     width: 0;
-    height: 3px;
+    height: 1px;
     background-color: #ffffff;
     transform: scale(1.2) translateY(3px);
     transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
@@ -115,9 +115,9 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 11%;
     height: 100%;
-    background-color: #0e0e0e;
+    background-color: #fff;
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
@@ -125,14 +125,16 @@
     align-items: flex-start;
     transform: translateX(100%);
     z-index: 999;
-    color: #fff;
+    color: #000000;
     transition: transform 0.3s ease;
 }
 
 .navbar_menu a {
-    font-size: 2rem; /* 수정: font-size 1px -> 1rem */
-    margin-left: 4rem;
-    margin-bottom: 3rem;
+    font-size: 1.7rem; /* 수정: font-size 1px -> 1rem */
+    color:#000000;
+    margin-top: -0.5rem;
+    margin-left: 3rem;
+    margin-bottom: 3.5rem;
     text-decoration: none;
 }
 
@@ -169,8 +171,8 @@
 .status li div,
 .status li dl {
     text-align: center;
-    margin-top: 22px;
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 23px;
 }
 
 .status li:not(:last-child) div,
@@ -180,7 +182,7 @@
 
 .header_title {
     width: 100%;
-    margin: 40px auto 100px auto;
+    margin: 25px auto 100px auto;
     color: #FFF;
     text-align: right; /* 우측 정렬 */
 }
@@ -277,7 +279,7 @@
 }
 
 .icons > li > .icon_menu {
-    font-size: 20px;
+    font-size: 23px;
     font-weight: bold;
 
 }
@@ -289,7 +291,7 @@
 }
 
 
-/* 테블릿 가로 버전 (max-width: 1100px) */
+/* 테블릿 가로 버전 (max-width: 1100px)---------------------------------------- */
 @media screen and (max-width: 1100px) {
     .wrap {
         width: 1024px; /* 1024px 뷰포트 내에 맞추도록 폭 조정 */
@@ -324,7 +326,7 @@
         color: #fff;
         margin-right: 1.5rem;
         font-size: 1.3rem;
-        font-weight: 600;
+        font-weight: 400;
         position: relative;
         padding: 0.5rem 0;
     }
@@ -339,7 +341,7 @@
         bottom: -1px;
         left: 50%;
         width: 0;
-        height: 3px;
+        height: px;
         background-color: #fff;
         transform: scale(1.2) translateY(3px);
         transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
@@ -395,9 +397,9 @@
         position: fixed;
         top: 0;
         right: 0;
-        width: 50%;
+        width: 11%;
         height: 100%;
-        background-color: #0e0e0e;
+        background-color: #fff;
         padding: 0 2rem;
         display: flex;
         flex-direction: column;
@@ -405,14 +407,17 @@
         align-items: flex-start;
         transform: translateX(100%);
         z-index: 999;
-        color: #fff;
+        color: #000000;
+        
         transition: transform 0.3s ease;
     }
 
     .navbar_menu a {
-        font-size: 1rem; /* 수정: font-size 1px -> 1rem */
-        margin-left: 1rem;
-        margin-bottom: 3rem;
+        font-size: 1.2rem; /* 수정: font-size 1px -> 1rem */
+        color:#000000;
+        margin-top: 0rem;
+        margin-left: 1.5rem;
+        margin-bottom: 2rem;
         text-decoration: none;
     }
 
@@ -442,7 +447,7 @@
 
     .status li {
         flex: 1;
-        height: 120px;
+        height: 110x;
     }
 
     .status li div,
@@ -459,21 +464,23 @@
 
     .header_title {
         width: 100%;
-        margin: 23px auto 100px auto;
+        margin: 25px auto 100px auto;
+        font-weight: 1;
         color: #FFF;
         text-align: right; /* 우측 정렬 */
     }
 
     .header_title > h1 {
-        font-size: 55px;
+        font-size: 42px;
+        /* font-weight: 600; */
         position: absolute;
         right: 20px; /* 우측 정렬 */
         animation: slide 1.2s ease-out;
     }
 
     .header_title > h4 {
-        margin-top: 70px;
-        font-size: 25px;
+        margin-top: 60px;
+        font-size: 20px;
         position: absolute;
         right: 20px; /* 우측 정렬 */
         animation: slide 1.2s ease-out;
@@ -492,13 +499,13 @@
 
     .sub_title {
         width: 100%;
-        height: 570px;
+        height: 550px;
         margin-top: -132px;
         background: rgb(227, 226, 226);
     }
 
     .sub_title > h1 {
-        font-size: 38px;
+        font-size: 35px;
         padding-top: 110px;
         text-align: center;
     }
@@ -524,12 +531,12 @@
         width: 100%;
         max-width: 1024px;
         margin: 0 auto;
-        padding-top: 40px;
+        padding-top: 30px;
     }
 
     .icons > li {
         flex: 1;
-        height: 225px;
+        height: 220px;
         background: white;
         margin: 10px;
         text-align: center;
@@ -555,6 +562,12 @@
         transform: scale(1.2);
     }
 
+    .icons > li > .icon_menu {
+        font-size: 17px;
+        font-weight: bold;
+    
+    }
+
     /* .footer {
         position: fixed;
         bottom: 0;
@@ -569,7 +582,7 @@
     }
 }
 
-/* 테블릿 세로 버전 (max-width: 800px) */
+/* 테블릿 세로 버전 (max-width: 800px) ---------------------------------------- */
 @media screen and (max-width: 800px) {
     .mainpage_bg {
         background: url("image/bg_sub1.png") no-repeat center center;
@@ -829,12 +842,12 @@
         transform: scale(1.2);
     }
 
-    .footer {
+    /* .footer {
         position: fixed;
         bottom: 0;
         width: 100%;
-        text-align: center; /* 내부의 p 태그에 대한 텍스트 정렬 */
-    }
+        text-align: center; /* 내부의 p 태그에 대한 텍스트 정렬 
+    } */
 
     .footer > p {
         font-size: 15px;
