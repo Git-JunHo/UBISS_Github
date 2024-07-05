@@ -747,7 +747,7 @@
     .status li dl {
         text-align: center;
         margin-top: 22px;
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .status li:not(:last-child) div,
