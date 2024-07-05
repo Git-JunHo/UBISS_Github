@@ -583,8 +583,8 @@
     }
 }
 
-/* 테블릿 세로 버전 (max-width: 800px) ---------------------------------------- */
-@media screen and (max-width: 800px) {
+/* 테블릿 세로 버전 (max-width: 870px) ---------------------------------------- */
+@media screen and (max-width: 870px) {
     .wrap {
         width: 100%; /* 800px 뷰포트 내에 맞추도록 폭 조정 */
         height: 100%;
