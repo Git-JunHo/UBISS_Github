@@ -158,7 +158,7 @@
                     </li>
 
 
-                    <li class="main cutting">
+                    <li class="main cuttingplan">
                         <div class="icon_img">
                             <!-- <a href="https://webtest.ubaseinternational.com/hypertexERP/factory/cutting"> -->
                             <img src="image/cuttingplan.png" alt="cuttingnew icon">
@@ -168,7 +168,7 @@
                             CUTTING PLAN
                         </div>
                     </li>
-                    <li class="sub cutting">
+                    <li class="sub cuttingplan">
                         <div class="icon_img">
                             <a href="https://webtest.ubaseinternational.com/hypertexERP/factory/spreading">
                             <img src="image/spreadingplan.png" alt="spreadingnew icon">
@@ -178,7 +178,7 @@
                             SPREADING PLAN
                         </div>                     
                     </li>
-                    <li class="sub cutting">
+                    <li class="sub cuttingplan">
                         <div class="icon_img">
                             <a href="https://webtest.ubaseinternational.com/hypertexERP/factory/spreading">
                             <img src="image/spreadingnew.png" alt="spreadingnew icon">
@@ -190,7 +190,17 @@
                     </li>
 
 
-                    <li>
+                    <li class="main cutting">
+                        <div class="icon_img">
+                            <a href="https://webtest.ubaseinternational.com/hypertexERP/factory/cutting">
+                            <img src="image/cuttingnew.png" alt="cuttingnew icon">
+                            </a>
+                        </div>
+                        <div class="icon_menu">
+                            CUTTING
+                        </div>
+                    </li>
+                    <li class="sub cutting">
                         <div class="icon_img">
                             <a href="https://webtest.ubaseinternational.com/hypertexERP/factory/cutting">
                             <img src="image/cuttingnew.png" alt="cuttingnew icon">
@@ -284,21 +294,42 @@ window.onload = function() {
         }
     }
 
-    $('.menu .main.warehouse').on('click', function () {
+    $('.menu .main.warehouse').on('click', function(event) {
+        event.stopPropagation(); // 이벤트 버블링을 막아 메뉴 외부 클릭 처리가 되지 않도록 함
         toggleSubmenu('warehouse');
     });
 
-    $('.menu .main.cutting').on('click', function () {
+    $('.menu .main.cuttingplan').on('click', function(event) {
+        event.stopPropagation(); 
+        toggleSubmenu('cuttingplan');
+    });
+
+    $('.menu .main.cutting').on('click', function(event) {
+        event.stopPropagation(); 
         toggleSubmenu('cutting');
     });
 
-    $('.menu .main.sewing').on('click', function () {
+    $('.menu .main.sewing').on('click', function(event) {
+        event.stopPropagation(); 
         toggleSubmenu('sewing');
     });
 
-    $('.menu .main.packing').on('click', function () {
+    $('.menu .main.packing').on('click', function(event) {
+        event.stopPropagation(); 
         toggleSubmenu('packing');
     });
+    
+
+    // 문서의 아무 곳이나 클릭하면 서브메뉴를 닫음
+    $(document).on('click', function() {
+        $('.menu .sub').addClass('hide');
+    });
+
+    // 메뉴 내부를 클릭했을 때는 서브메뉴가 닫히지 않도록 함
+    $('.menu').on('click', function(event) {
+        event.stopPropagation();
+    });
+
 }
       
         
