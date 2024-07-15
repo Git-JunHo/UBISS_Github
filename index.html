@@ -15,12 +15,18 @@
             .show {display: block;}
 
             .menu .main {
-                background-color: #f7f6f6; /* white */
+                background-color: #ffffff /* white */
             }
 
             .menu .sub {
                 background-color: #ffffff; /* white */
             }
+
+            /*.menu .main.active, */
+            .menu .sub.active {
+                background-color: #b0bec5; /* yellow */
+            }
+            
         </style>
 
         <div class="wrap">
@@ -289,8 +295,16 @@ window.onload = function() {
         if (submenu.hasClass('hide')) {
             $('.menu .sub').addClass('hide'); // 모든 서브메뉴를 숨깁니다.
             submenu.removeClass('hide'); // 선택된 서브메뉴를 표시합니다.
+
+            $('.menu .main').removeClass('active'); // 모든 메인 메뉴의 active 클래스를 제거합니다.
+            $('.menu .sub').removeClass('active'); // 모든 서브메뉴의 active 클래스를 제거합니다.
+    
+            $('.menu .main.' + menuClass).addClass('active'); // 선택된 메인 메뉴에 active 클래스를 추가합니다.
+            submenu.addClass('active'); // 선택된 서브메뉴에 active 클래스를 추가합니다.
         } else {
             submenu.addClass('hide'); // 선택된 서브메뉴를 숨깁니다.
+            $('.menu .main.' + menuClass).removeClass('active'); // 선택된 메인 메뉴의 active 클래스를 제거합니다.
+            submenu.removeClass('active'); // 선택된 서브메뉴의 active 클래스를 제거합니다.
         }
     }
 
@@ -323,6 +337,8 @@ window.onload = function() {
     // 문서의 아무 곳이나 클릭하면 서브메뉴를 닫음
     $(document).on('click', function() {
         $('.menu .sub').addClass('hide');
+        $('.menu .main').removeClass('active'); // 모든 메인 메뉴의 active 클래스를 제거합니다.
+        $('.menu .sub').removeClass('active'); // 모든 서브메뉴의 active 클래스를 제거합니다.
     });
 
     // 메뉴 내부를 클릭했을 때는 서브메뉴가 닫히지 않도록 함
