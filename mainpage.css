@@ -8,6 +8,10 @@
     padding: 0;
 }
 
+[class*="slide"]{
+    color: blueviolet;
+}
+
 .wrap {
     width: 100%;
     /* max-width: 1920px; 최대 너비를 1920px로 설정 */
