@@ -105,50 +105,49 @@
                     <li>    
                         <div>
                             <div class="title">Factory</div>
-                            <div class="slidevalue0 VINA1">VINA 1</div>
+                            <div class="slidevalue0 VINA1 ">VINA 1</div>
                             <div class="slidevalue0 VINA2">VINA 2</div>
                             <div class="slidevalue0 PHIL1">PHIL 1</div>
                         </div>
                     </li> 
-
                      <li>    
                         <div>
                             <div class="title">창고 관리</div>
-                            <div class="slidevalue1 VINA1">25,445</div>
-                            <div class="slidevalue1 VINA2">75,794</div>
-                            <div class="slidevalue1 PHIL1">11,187</div>
+                            <div id="vina1_wh" class="slidevalue1 VINA1">25,445</div>
+                            <div id="vina2_wh" class="slidevalue1 VINA2">75,794</div>
+                            <div id="phil1_wh" class="slidevalue1 PHIL1">11,187</div>
                         </div>
                     </li> 
                     <li>
                         <div>
                             <div class="title">원단, 재단관리</div>
-                            <div class="slidevalue2 VINA1">123,456</div>
-                            <div class="slidevalue2 VINA2">789,147</div>
-                            <div class="slidevalue2 PHIL1">622,885</div>
+                            <div id="vina1_cut" class="slidevalue2 VINA1">123,456</div>
+                            <div id="vina2_cut" class="slidevalue2 VINA2">789,147</div>
+                            <div id="phil1_cut" class="slidevalue2 PHIL1">622,885</div>
                         </div>
                     </li>
                     <li>
                         <div>
                             <div class="title">생산 계획</div>
-                            <div class="slidevalue3 VINA1">305,000+</div>
-                            <div class="slidevalue3 VINA2">400,777+</div>
-                            <div class="slidevalue3 PHIL1">544,450+</div>
+                            <div id="vina1_plan" class="slidevalue3 VINA1">305,000+</div>
+                            <div id="vina2_plan" class="slidevalue3 VINA2">400,777+</div>
+                            <div id="phil1_plan" class="slidevalue3 PHIL1">544,450+</div>
                         </div>
                     </li>
                     <li>
                         <div>
                             <div class="title">생산 추적</div>
-                            <div class="slidevalue4 VINA1">587,573</div>
-                            <div class="slidevalue4 VINA2">378,368</div>
-                            <div class="slidevalue4 PHIL1">250,195</div>
+                            <div id="vina1_track" class="slidevalue4 VINA1">587,573</div>
+                            <div id="vina2_track" class="slidevalue4 VINA2">378,368</div>
+                            <div id="phil1_track" class="slidevalue4 PHIL1">250,195</div>
                         </div>
                     </li>
                     <li>
                         <div>
                             <div class="title">품질 관리</div>
-                            <div class="slidevalue5 VINA1">$ 86,958</div>
-                            <div class="slidevalue5 VINA2">$ 16,123</div>
-                            <div class="slidevalue5 PHIL1">$ 52,453</div>
+                            <div id="vina1_qa" class="slidevalue5 VINA1">$ 86,958</div>
+                            <div id="vina2_qa" class="slidevalue5 VINA2">$ 16,123</div>
+                            <div id="phil1_qa" class="slidevalue5 PHIL1">$ 52,453</div>
                         </div>
                     </li>               
                 </ul>
@@ -367,9 +366,10 @@ window.onload = function() {
     $('.menu').on('click', function(event) {
         event.stopPropagation();
     });  
-    slideShow(2000);
+    getSheetValue();
+    slideShow(5000);
 }
 </script>
-<!-- <script src="./shee"></script> -->
+<script src="./sheetValues.js"></script>
     
 </html>

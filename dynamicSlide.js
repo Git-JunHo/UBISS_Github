@@ -1,4 +1,4 @@
-var SliceIndex = 0;
+var SlideIndex = 0;
 
 function slideShow(interval) {
     if (interval == undefined) {
@@ -23,16 +23,16 @@ function slideShow(interval) {
         n[i].style.display = "none";
         //처음에 전부 display를 none으로 한다.
         }
-        SliceIndex++;
-        if (SliceIndex > x.length) {
-            SliceIndex = 1;  //인덱스가 초과되면 1로 변경
+        SlideIndex++;
+        if (SlideIndex > x.length) {
+            SlideIndex = 1;  //인덱스가 초과되면 1로 변경
         }   
-        x[SliceIndex-1].style.display = "block";  //해당 인덱스는 block으로
-        y[SliceIndex-1].style.display = "block";
-        z[SliceIndex-1].style.display = "block";
-        k[SliceIndex-1].style.display = "block";
-        m[SliceIndex-1].style.display = "block";
-        n[SliceIndex-1].style.display = "block";
+        x[SlideIndex-1].style.display = "block";  //해당 인덱스는 block으로
+        y[SlideIndex-1].style.display = "block";
+        z[SlideIndex-1].style.display = "block";
+        k[SlideIndex-1].style.display = "block";
+        m[SlideIndex-1].style.display = "block";
+        n[SlideIndex-1].style.display = "block";
     }, interval);
     // setTimeout(slideShow, 3000);   //함수를 4초마다 호출    
 }
