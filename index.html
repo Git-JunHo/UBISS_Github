@@ -30,8 +30,10 @@
         </style>
 
         <div class="wrap">
-            <div class="mainpage_bg">
-                <!-- <div class="header"> -->
+            <!-- <div class="mainpage_bg slider"> -->
+                <div class="mainpage_bg container">
+                <div class="slide"></div>
+                
                 <div class="navbar_main">
                     <a class="navbar_logo" href="#"></a>
                     <div class="navbar_links">
@@ -64,7 +66,7 @@
                 <script type="text/javascript" src="navber_scroll.js"></script>
                 <script type="text/javascript" src="navber_burger.js"></script>
                 <div class="header_title">
-                    <h1>UBISS</h1>
+                    <h1><span style="font-size: 40px ;color: purple">이미지 quality <span style="font-size: 50px;">🍄</span> </span> UBISS</h1>
                     <h4>UBI factory Smart System</h4>
                 </div>         
             </div>
@@ -72,7 +74,7 @@
             <!-- intro end -->
             <!-- AJAX 연동 해보기 -->
             
-            <!--<div id="dataContainer">Loading...</div> 
+            <!--<div id="dataContmainer">Loading...</div> 
             <script>
                 // 예시로 사용할 가상의 데이터
                 var data = {
@@ -100,7 +102,9 @@
                 // fetchData 함수 호출
                 fetchData();
             </script> -->
+            
             <div class="status">
+                
                 <ul>
                     <li>    
                         <div>
@@ -149,10 +153,16 @@
                             <div id="vina2_qa" class="slidevalue5 VINA2">$ 16,123</div>
                             <div id="phil1_qa" class="slidevalue5 PHIL1">$ 52,453</div>
                         </div>
+
+                        
+                        
                     </li>               
                 </ul>
             </div>
             <!-- status end  -->
+            <div class="pauseButtonDiv" style="background-color: black; color: blue;">위치 조정중...<span style="font-size: 30px;">🍄</span>
+                <button class="slidePauseButton"id="pauseButton">Pause</button>
+            </div>
 
             <div class="sub_title">
                 <h1>Production Flow Chart</h1>
@@ -291,7 +301,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="./dynamicSlide.js"></script>
     <script type="text/javascript">
-        
+  
 window.onload = function() {
     /*$('.menu .sub').addClass('hide');
     $('.menu .main.warehouse').on('click', function () {
@@ -367,8 +377,24 @@ window.onload = function() {
         event.stopPropagation();
     });  
     getSheetValue();
-    slideShow(5000);
+    slideShow();
 }
+
+
+document.getElementById("pauseButton").addEventListener("click", function() {
+    if (isPaused) {
+        slideShow();  // 슬라이드 쇼를 다시 시작
+        this.textContent = "Pause";  // 버튼 텍스트를 "Pause"로 변경
+    } else {
+        clearInterval(slideInterval);  // 슬라이드 쇼를 일시 정지
+        this.textContent = "Resume";  // 버튼 텍스트를 "Resume"으로 변경
+    }
+    isPaused = !isPaused;  // 일시정지 상태를 토글
+});
+
+
+
+
 </script>
 <script src="./sheetValues.js"></script>
     
