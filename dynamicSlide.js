@@ -1,10 +1,12 @@
 var SlideIndex = 0;
+var slideInterval;
+var isPaused = false;
 
 function slideShow(interval) {
     if (interval == undefined) {
-        interval = 3000;
+        interval = 1000;
     }
-    setInterval(function () {        
+    slideInterval = setInterval(function () {        
         var i;
         var x = document.getElementsByClassName("slidevalue1");  //slide1에 대한 dom 참조
         var y = document.getElementsByClassName("slidevalue2");
