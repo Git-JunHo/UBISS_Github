@@ -4,7 +4,7 @@ var isPaused = false;
 
 function slideShow(interval) {
     if (interval == undefined) {
-        interval = 1000;
+        interval = 3000;
     }
     slideInterval = setInterval(function () {        
         var i;
