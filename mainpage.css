@@ -9,7 +9,7 @@
 }
 
 .pauseButtonCon{
-
+    
     position: relative;
     top: -40px;
 
@@ -19,6 +19,10 @@
     
     display: flex;
     justify-content: right;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
 
 .pauseButtonDiv{    
@@ -31,8 +35,8 @@
     
     /* margin-top: 20px; */
     border-radius: 20px;
-    border-color: rgb(180, 154, 203);
-    background-color: rgb(180, 154, 203);
+    border-color: rgb(184, 179, 190);
+    background-color: rgb(184, 179, 190);
     color: white;
     height:30px;
     width:80px;
