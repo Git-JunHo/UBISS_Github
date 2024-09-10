@@ -947,14 +947,16 @@ ul > li:hover {
         background-size: cover;
         background-position: center;
     }
-    50% {
+    /* 50% {
         background:url(./image/bg_window.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-    }
+    } */
     100% {
-        background:url(./image/history_2016.png) no-repeat center center;
+        /* position: relative;
+        top: -40px; */
+        background:url(./image/bg_ubi2.png) no-repeat center center;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
