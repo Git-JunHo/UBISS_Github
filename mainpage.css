@@ -8,10 +8,25 @@
     padding: 0;
 }
 
-.pauseButtonDiv{
-    text-align: right;
-    margin-right: 4%;
+.pauseButtonCon{
+
+    position: relative;
+    top: -40px;
+
+    max-width:  1550px;
+    width: 100%;
+    margin: auto;
+    
+    display: flex;
+    justify-content: right;
 }
+
+.pauseButtonDiv{    
+    display: flex;
+    align-items: center;  
+    /* justify-content: center; */
+}
+
 #pauseButton{
     
     /* margin-top: 20px; */
@@ -182,11 +197,17 @@
 .status {
 
     width: 100%;
-    max-width: 1550px; /* 최대 너비를 설정하여 가운데 정렬 유지 */
+    /* ul 넓이를 div개수만큼 나눠가짐 */
+    max-width: 1550px; /* 최대 너비를 설정하여 가운데 정렬 유지 */ 
     margin: auto;
 }
 
+ul > li:hover {
+    transform: scale(1.1);
+    color: purple;
+}
 .status ul {
+    
     position: relative;
     top: -60px;
     display: flex;
