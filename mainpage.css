@@ -940,10 +940,13 @@ ul > li:hover {
 .container{
     height: 50vh;
     animation-name: back_change;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+    /* animation-duration: 2s; */
+    /* animation-iteration-count: infinite alternate; */
+    animation: back_change 20s infinite alternate;
+
     animation-fill-mode: forwards;
 }
+
 @keyframes back_change{
     0% {
         background:url(./image/bg_sub1.png);
@@ -951,16 +954,16 @@ ul > li:hover {
         background-size: cover;
         background-position: center;
     }
-    /* 50% {
-        background:url(./image/bg_window.png);
+    50% {
+        background:url(./image/bg_ubi2.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-    } */
-    100% {
+    }
+   100% {
         /* position: relative;
         top: -40px; */
-        background:url(./image/bg_ubi2.png) no-repeat center center;
+        background:url(./image/bg_sub1.png) no-repeat center center;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
