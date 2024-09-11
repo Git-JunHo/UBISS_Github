@@ -191,7 +191,7 @@
 
 .header_title > h4 {
     margin-top: 85px;
-    font-size: 30px;
+    font-size: 27px;
     position: absolute;
     right: 40px; /* 우측 정렬 */
     animation: slide 1.2s ease-out;
