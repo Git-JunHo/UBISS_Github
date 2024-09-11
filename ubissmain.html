@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+        <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="ubissmain.css">
+        <title>UBISS</title>
+    </head>
+
+    <body>      
+        <style>
+            .hide {display: none !important;}
+            .show {display: block;}
+
+            /*.menu .main {
+                background-color: #000000 /* white 
+            }
+
+            /* .menu .sub {
+                background-color: #ffffff; /* white 
+            
+            } */
+          
+            /*.menu .main.active, 
+            .menu .sub.active {
+                background-color: #4c4e4e; /* yellow 
+                
+            }*/
+            
+        </style>
+
+        <div class="wrap">
+            <div class="mainpage_bg">
+                <div class="header_title">
+                    <h1>UBISS</h1>
+                    <h4>UBI factory Smart System</h4>
+                </div>
+            <div class="mainpage_bg2 container">
+                <div class="main_title">
+                    <h1>UBI factory Smart System</h1>
+                </div>    
+                <div class="navbar_overlay"></div>
+
+                <div class="navbar_burger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                </div>
+
+                <div class="navbar_menu">
+                    <a href="https://www.ubaseinternational.com/">HOME</a>
+                    <a href="https://erp.ubaseinternational.com/">UBI</a>
+                    <a href="https://webtest.ubaseinternational.com/hypertexERP/factory/login">UBISS</a>
+                    <a href="https://www.ubaseinternational.com/business/introduction.asp">CONTACT</a>
+                    <div class="navbar_burger_back">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                        </svg>
+                    </div>
+                </div>
+                <script type="text/javascript" src="navber_scroll.js"></script>
+                <script type="text/javascript" src="navber_burger.js"></script>
+                
+                <ul class="icons menu">
+
+                    <li class="main factory">
+                        <div class="icon_img">
+                            <a href="https://erp.ubaseinternational.com/hypertexERP/warehouse/">
+                            <img src="ubissimage/icon11.png" alt="factory icon">
+                            </a>
+                        </div>
+                        <div class="icon_menu">
+                            FACTORY
+                        </div>
+                    </li>
+
+                    <li class="main office">
+                        <div class="icon_img">
+                            <a href="https://erp.ubaseinternational.com/hypertexERP/warehouse/">
+                            <img src="ubissimage/icon22.png" alt="office icon">
+                            </a>
+                        </div>
+                        <div class="icon_menu">
+                            OFFICE
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>        
+                 
+            </div>
+        </div>
+        <div class="footer">
+            <p>ⓒ UBASE INTERNATIONAL, INC. ALL RIGHTS RESERVED.</p>
+        </div>
+    </body>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+
+window.onload = function() {
+
+    $('.menu .sub').addClass('hide');
+
+    function toggleSubmenu(menuClass) {
+        const submenu = $('.menu .sub.' + menuClass);
+        if (submenu.hasClass('hide')) {
+            $('.menu .sub').addClass('hide'); // 모든 서브메뉴를 숨깁니다.
+            submenu.removeClass('hide'); // 선택된 서브메뉴를 표시합니다.
+
+            $('.menu .main').removeClass('active'); // 모든 메인 메뉴의 active 클래스를 제거합니다.
+            $('.menu .sub').removeClass('active'); // 모든 서브메뉴의 active 클래스를 제거합니다.
+    
+            $('.menu .main.' + menuClass).addClass('active'); // 선택된 메인 메뉴에 active 클래스를 추가합니다.
+            submenu.addClass('active'); // 선택된 서브메뉴에 active 클래스를 추가합니다.
+        } else {
+            submenu.addClass('hide'); // 선택된 서브메뉴를 숨깁니다.
+            $('.menu .main.' + menuClass).removeClass('active'); // 선택된 메인 메뉴의 active 클래스를 제거합니다.
+            submenu.removeClass('active'); // 선택된 서브메뉴의 active 클래스를 제거합니다.
+        }
+    }
+
+    $('.menu .main.warehouse').on('click', function(event) {
+        event.stopPropagation(); // 이벤트 버블링을 막아 메뉴 외부 클릭 처리가 되지 않도록 함
+        toggleSubmenu('warehouse');
+    });
+
+    $('.menu .main.cuttingplan').on('click', function(event) {
+        event.stopPropagation(); 
+        toggleSubmenu('cuttingplan');
+    });
+
+    $('.menu .main.cutting').on('click', function(event) {
+        event.stopPropagation(); 
+        toggleSubmenu('cutting');
+    });
+
+    $('.menu .main.sewing').on('click', function(event) {
+        event.stopPropagation(); 
+        toggleSubmenu('sewing');
+    });
+
+    $('.menu .main.packing').on('click', function(event) {
+        event.stopPropagation(); 
+        toggleSubmenu('packing');
+    });
+
+
+    // 문서의 아무 곳이나 클릭하면 서브메뉴를 닫음
+    $(document).on('click', function() {
+        $('.menu .sub').addClass('hide');
+        $('.menu .main').removeClass('active'); // 모든 메인 메뉴의 active 클래스를 제거합니다.
+        $('.menu .sub').removeClass('active'); // 모든 서브메뉴의 active 클래스를 제거합니다.
+    });
+
+    // 메뉴 내부를 클릭했을 때는 서브메뉴가 닫히지 않도록 함
+    $('.menu').on('click', function(event) {
+        event.stopPropagation();
+    });
+
+}
+      
+        
+    </script>
+
+</html>

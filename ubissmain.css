@@ -1,0 +1,896 @@
+/* 기본 스타일 */
+* {
+    font-family: "Noto Sans KR", "Poppins", sans-serif; /*font-family:Poppins;font-style:italic;*/
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 100%;
+    /* max-width: 1920px; 최대 너비를 1920px로 설정*/
+    height: 100%;  
+    margin: auto; /* 가운데 정렬 */
+} 
+
+
+.mainpage_bg {
+    background: url("ubissimage/bg_sub000.png") no-repeat top center; /* 이미지가 가운데 정렬되며, 아래쪽에 위치 */
+    background-size: contain; /* 이미지가 화면에 맞춰 축소되도록 설정 (또는 필요에 따라 90% 등으로 설정) */
+    height: 100vh; /* 전체 화면 높이 설정 */
+    width: 100%; /* 전체 화면 너비 설정 */
+    position: relative; /* 다른 요소들이 이 위에 겹칠 수 있도록 설정 */
+    /* z-index: 1; 메뉴와 다른 요소들이 배경 위에 표시되도록 z-index 설정 */
+    /* padding: 20px; 화면에 여백을 추가하여 조금 더 여유롭게 보이도록 설정 */
+}
+
+.mainpage_bg2 {
+    background: url("ubissimage/slide/5.jpg") no-repeat center bottom; /* 중앙 하단에 이미지 위치 설정 */
+    background-size: contain; /* 이미지가 화면에 맞춰 축소되도록 설정 */
+    width: 100%; /* 전체 화면 너비 설정 */
+    height: 66.9%; /* 하단에서부터 70% 높이 설정 */
+    position: absolute; /* 하단에서부터 요소를 배치하도록 절대 위치 설정 */
+    bottom: 0%; /* 화면 하단에서부터 시작 */
+    z-index: 1; /* 다른 요소들이 배경 위에 표시되도록 설정 */
+    animation-name: back_change; /* 애니메이션 추가 */
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes back_change {
+    0% {
+        background: url(./ubissimage/slide/1.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    7% {
+        background: url(./ubissimage/slide/2.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    14% {
+        background: url(./ubissimage/slide/3.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    21% {
+        background: url(./ubissimage/slide/4.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    28% {
+        background: url(./ubissimage/slide/5.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    35% {
+        background: url(./ubissimage/slide/6.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    42% {
+        background: url(./ubissimage/slide/7.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    49% {
+        background: url(./ubissimage/slide/8.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    56% {
+        background: url(./ubissimage/slide/9.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    63% {
+        background: url(./ubissimage/slide/10.png) no-repeat center center;
+        background-size: cover;
+    }
+    70% {
+        background: url(./ubissimage/slide/11.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    77% {
+        background: url(./ubissimage/slide/12.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    84% {
+        background: url(./ubissimage/slide/13.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    91% {
+        background: url(./ubissimage/slide/14.jpg) no-repeat center center;
+        background-size: cover;
+    }
+    100% {
+        background: url(./ubissimage/slide/15.jpg) no-repeat center center;
+        background-size: cover;
+    }
+}
+
+
+.navbar_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    z-index: 998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.navbar_burger {
+    position: fixed;
+    top: 2rem;
+    left: 1rem;
+    cursor: pointer;
+    color: #ffffff;
+    z-index: 1000; /* 다른 요소들 위에 위치하도록 z-index 추가 */
+
+}
+
+.navbar_menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 13%;
+    height: 100%;
+    background-color: #000000;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateX(100%);
+    z-index: 999;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+    opacity: 0.5; /*요소를 반투명하게 설정 */
+    
+}
+
+.navbar_menu a {
+    font-size: 1.7rem; /* 수정: font-size 1px -> 1rem */
+    color:#ffffff;
+    margin-top: -0.5rem;
+    margin-left: 3rem;
+    margin-bottom: 3.5rem;
+    text-decoration: none;
+    
+    
+}
+
+.navbar_menu.active {
+    transform: translateX(0);
+    
+}
+
+.navbar_overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.header_title {
+    width: 100%;
+    color: #ffffff; 
+    text-align: right; /* 우측 정렬 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), /* 기본 그림자  */
+    /* 4px 4px 10px rgba(0, 0, 0, 0.3); 두 번째 그림자  */ 
+    
+}
+
+.header_title > h1 {
+    font-size: 60px;
+    position: absolute;
+    right: 40px; /* 우측 정렬 */
+    animation: slide 1.2s ease-out;
+    margin: 15px;
+    margin-right: 2px;
+    
+}
+
+.header_title > h4 {
+    margin-top: 85px;
+    font-size: 30px;
+    position: absolute;
+    right: 40px; /* 우측 정렬 */
+    animation: slide 1.2s ease-out;
+    padding-right: 1px;
+    color: inherit;
+    
+}
+
+.main_title {
+    text-align: center; /* 텍스트 중앙 정렬 */
+    width: 100%; /* 가로 너비를 100%로 설정 */
+    font-style: italic;
+}
+
+.main_title > h1 {
+    margin-top: -60px;  /* 제목의 상단 여백을 100px로 설정 */
+    font-size: 90px;    /* 제목의 글꼴 크기를 60px로 설정 */
+    color: #dfdddd;        /* 글자 색상 설정 */
+    font-weight: bold;  /* 굵은 글꼴 설정 */
+    text-transform: uppercase; /* 대문자로 변환 */
+    line-height: 1.2;   /* 줄 간격 설정 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), /* 기본 그림자 */ 
+                 4px 4px 10px rgba(0, 0, 0, 0.3); /* 두 번째 그림자 */ 
+}
+
+@keyframes slide {
+    from {
+        right: -350px;
+        opacity: 0;
+        
+    }
+    to {
+        right: 40px;
+        opacity: 1;
+    }
+}
+
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:77%;
+    max-width: auto ; /*1920px; /* 최대 너비 설정 */
+    margin: 0 auto;
+    padding-top: 5rem;
+    color: #333;      
+}
+
+.icons > li {
+    flex: 1;
+    height: 23rem;
+    background-color: rgba(255, 255, 255, 0.75); /*배경만 반투명하게 설정*/
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+    transition: transform 2s; /* 회전 속도를 2초로 설정 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    margin-left: 170px; 
+    margin-right: 170px; 
+}
+
+.icons > li:hover {
+    transform: rotateY(180deg) scale(1.15);
+}
+
+.icons > li > .icon_img {
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    /*opacity: 1; /*아이콘을 불투명하게 유지*/
+    /*background-color: #ffffff; */
+    /*background-color: rgba(255, 255, 255, 1); /*배경만 반투명하게 설정 */
+}
+
+.icons > li > .icon_img:hover {
+    transform: scale(1.25);
+}
+
+.icons > li > .icon_menu {
+    font-size: 35px;
+    font-weight: bold;
+    opacity: 1; 
+    height: auto;
+    padding-top: -1rem;
+    color: inherit;
+}
+
+.footer > p {
+    font-size: 13px;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 아직 수정안함 */
+/* 테블릿 가로 버전 (max-width: 1100px)---------------------------------------- */
+@media screen and (max-width: 1100px) {
+    .wrap {
+        width: 100%; /* 1024px 뷰포트 내에 맞추도록 폭 조정 */
+        height: 100%;
+        margin: 0 auto; /* 컨테이너를 가운데 정렬 */
+    }
+
+    .mainpage_bg {
+        background: url("image/bg_sub1.png") no-repeat center center;
+        background-size: cover;
+        height: 390px;
+        text-align: center; /* 수정: top -> center */
+    }
+
+    .navbar_main {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        color: #fff;
+        z-index: 999;
+        animation: navbarBottom 1s forwards;
+    }
+
+    .navbar_links {
+        margin-right: 2%;
+    }
+
+    .navbar_links > a {
+        text-decoration: none;
+        color: #fff;
+        margin-right: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+        position: relative;
+        padding: 0.5rem 0;
+    }
+
+    .navbar_links a:last-child {
+        margin-right: 0;
+    }
+
+    .navbar_links a::before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        width: 0;
+        height: px;
+        background-color: #fff;
+        transform: scale(1.2) translateY(3px);
+        transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+    }
+
+    .navbar_links a:hover::before {
+        width: 100%;
+        left: 0;
+    }
+
+    .navbar_logo {
+        margin-left: 10%;
+        text-decoration: none;
+        color: #fff;
+        font-size: 2.3rem;
+        font-weight: 500;
+    }
+
+    @keyframes navbarBottom {
+        0% {
+            transform: translateY(-70%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .navbar_overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0);
+        z-index: 998;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+    }
+
+    .navbar_burger {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        cursor: pointer;
+        color: #FFF;
+        z-index: 1000; /* 다른 요소들 위에 위치하도록 z-index 추가 */
+    }
+
+    .navbar_menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 11%;
+        height: 100%;
+        background-color: #fff;
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        transform: translateX(100%);
+        z-index: 999;
+        color: #000000;
+        
+        transition: transform 0.3s ease;
+    }
+
+    .navbar_menu a {
+        font-size: 1.2rem; /* 수정: font-size 1px -> 1rem */
+        color:#000000;
+        margin-top: 0rem;
+        margin-left: 1.5rem;
+        margin-bottom: 2rem;
+        text-decoration: none;
+    }
+
+    .navbar_menu.active {
+        transform: translateX(0);
+    }
+
+    .navbar_overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .status {
+        width: 90%;
+        max-width: 1110px;
+        margin: auto;
+    }
+
+    .status ul {
+        position: relative;
+        top: -60px;
+        display: flex;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+
+    .status li {
+        flex: 1;
+        height: 110x;
+    }
+
+    .status li div,
+    .status li dl {
+        text-align: center;
+        margin-top: 22px;
+        font-size: 20px;
+    }
+
+    .status li:not(:last-child) div,
+    .status li:not(:last-child) dl {
+        border-right: 1px solid #E1E1E1;
+    }
+
+    .header_title {
+        width: 100%;
+        margin: 25px auto 100px auto;
+        font-weight: 1;
+        color: #FFF;
+        text-align: right; /* 우측 정렬 */
+    }
+
+    .header_title > h1 {
+        font-size: 42px;
+        /* font-weight: 600; */
+        position: absolute;
+        right: 20px; /* 우측 정렬 */
+        animation: slide 1.2s ease-out;
+    }
+
+    .header_title > h4 {
+        margin-top: 60px;
+        font-size: 20px;
+        position: absolute;
+        right: 20px; /* 우측 정렬 */
+        animation: slide 1.2s ease-out;
+    }
+
+    @keyframes slide {
+        from {
+            right: -350px;
+            opacity: 0;
+        }
+        to {
+            right: 20px;
+            opacity: 1;
+        }
+    }
+
+    .sub_title {
+        width: 100%;
+        height: 100%;
+        /* margin-top: -132px; */
+        background: rgb(227, 226, 226);
+    }
+
+    .sub_title > h1 {
+        font-size: 35px;
+        padding-top: 110px;
+        text-align: center;
+    }
+
+    .sub_title > .sub_title2 {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .icons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 70px 0;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .icons > li {
+        flex: 1;
+        height: 220px;
+        background: white;
+        margin: 10px;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        transition: transform 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons > li:hover {
+        transform: scale(1.11);
+    }
+
+    .icons > li > .icon_img {
+        margin-bottom: 10px;
+        transition: transform 0.3s;
+    }
+
+    .icons > li > .icon_img:hover {
+        transform: scale(1.2);
+    }
+
+    .icons > li > .icon_menu {
+        font-size: 17px;
+        font-weight: bold;
+    
+    }
+
+    /* .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center; /* 내부의 p 태그에 대한 텍스트 정렬 
+    } */
+
+    .footer > p {
+        font-size: 13px;
+        margin: auto;
+        text-align: center;
+    }
+}
+
+/* 테블릿 세로 버전 (max-width: 870px) ---------------------------------------- */
+@media screen and (max-width: 870px) {
+    .wrap {
+        width: 100%; /* 800px 뷰포트 내에 맞추도록 폭 조정 */
+        height: 100%;
+        margin: 0 auto; /* 컨테이너를 가운데 정렬 */
+    }
+
+    .mainpage_bg {
+        background: url("image/bg_sub1.png") no-repeat center center;
+        background-size: cover;
+        height: 390px;
+        text-align: center; /* 수정: top -> center */
+    }
+
+    .navbar_main {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        color: #fff;
+        z-index: 999;
+        animation: navbarBottom 1s forwards;
+    }
+
+    .navbar_links {
+        margin-right: 2%;
+    }
+
+    .navbar_links > a {
+        text-decoration: none;
+        color: #fff;
+        margin-right: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+        position: relative;
+        padding: 0.5rem 0;
+    }
+
+    .navbar_links a:last-child {
+        margin-right: 0;
+    }
+
+    .navbar_links a::before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        width: 0;
+        height: px;
+        background-color: #fff;
+        transform: scale(1.2) translateY(3px);
+        transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+    }
+
+    .navbar_links a:hover::before {
+        width: 100%;
+        left: 0;
+    }
+
+    .navbar_logo {
+        margin-left: 10%;
+        text-decoration: none;
+        color: #fff;
+        font-size: 2.3rem;
+        font-weight: 500;
+    }
+
+    @keyframes navbarBottom {
+        0% {
+            transform: translateY(-70%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .navbar_overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0);
+        z-index: 998;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+    }
+
+    .navbar_burger {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        cursor: pointer;
+        color: #FFF;
+        z-index: 1000; /* 다른 요소들 위에 위치하도록 z-index 추가 */
+    }
+
+    .navbar_menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 13%;
+        height: 100%;
+        background-color: #fff;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        transform: translateX(100%);
+        z-index: 999;
+        color: #000000;
+        
+        transition: transform 0.3s ease;
+    }
+
+    .navbar_menu a {
+        font-size: 1.2rem; /* 수정: font-size 1px -> 1rem */
+        color:#000000;
+        margin-top: -1rem;
+        margin-left: 1.5rem;
+        margin-bottom: 3rem;
+        text-decoration: none;
+    }
+
+    .navbar_menu.active {
+        transform: translateX(0);
+    }
+
+    .navbar_overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .status {
+        width: 90%;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .status ul {
+        position: relative;
+        top: -60px;
+        display: flex;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+
+    .status li {
+        flex: 1;
+        height: 110x;
+    }
+
+    .status li div,
+    .status li dl {
+        text-align: center;
+        margin-top: 22px;
+        font-size: 17px;
+    }
+
+    .status li:not(:last-child) div,
+    .status li:not(:last-child) dl {
+        border-right: 1px solid #E1E1E1;
+    }
+
+    .header_title {
+        width: 100%;
+        margin: 25px auto 100px auto;
+        font-weight: 1;
+        color: #FFF;
+        text-align: right; /* 우측 정렬 */
+    }
+
+    .header_title > h1 {
+        font-size: 42px;
+        /* font-weight: 600; */
+        position: absolute;
+        right: 20px; /* 우측 정렬 */
+        animation: slide 1.2s ease-out;
+    }
+
+    .header_title > h4 {
+        margin-top: 60px;
+        font-size: 20px;
+        position: absolute;
+        right: 20px; /* 우측 정렬 */
+        animation: slide 1.2s ease-out;
+    }
+
+    @keyframes slide {
+        from {
+            right: -350px;
+            opacity: 0;
+        }
+        to {
+            right: 20px;
+            opacity: 1;
+        }
+    }
+
+    .sub_title {
+        width: 100%;
+        height: 100%;
+        /* margin-top: auto; */
+        background: rgb(227, 226, 226);
+    }
+
+    .sub_title > h1 {
+        font-size: 35px;
+        padding-top: 110px;
+        text-align: center;
+    }
+
+    .sub_title > .sub_title2 {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .icons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 70px 0;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .icons > li {
+        flex: 1;
+        height: 220px;
+        background: white;
+        margin: 10px;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        transition: transform 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icons > li:hover {
+        transform: scale(1.11);
+    }
+
+    .icons > li > .icon_img {
+        margin-bottom: 10px;
+        transition: transform 0.3s;
+    }
+
+    .icons > li > .icon_img:hover {
+        transform: scale(1.2);
+    }
+
+    .icons > li > .icon_menu {
+        font-size: 17px;
+        font-weight: bold;
+    
+    }
+
+    /* .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center; /* 내부의 p 태그에 대한 텍스트 정렬 
+    } */
+
+    .footer > p {
+        font-size: 13px;
+        margin: auto;
+        text-align: center;
+    }
+}
