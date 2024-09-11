@@ -120,7 +120,7 @@
 
 .navbar_burger {
     position: fixed;
-    top: 2rem;
+    top: 1.2rem;
     left: 1rem;
     cursor: pointer;
     color: #ffffff;
@@ -246,7 +246,7 @@
     flex: 1;
     height: 23rem;
     background-color: rgba(255, 255, 255, 0.7); /*배경만 반투명하게 설정*/
-    margin: 10px;
+    margin: 10px 170px;
     text-align: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
     border-radius: 25px;
@@ -256,8 +256,9 @@
     justify-content: center;
     align-items: center;
     opacity: 1;
-    margin-left: 170px; 
-    margin-right: 170px; 
+    /* margin-left: 110px; 
+    margin-right: 110px; */
+    
 }
 
 .icons > li:hover {
