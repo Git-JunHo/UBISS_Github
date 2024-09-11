@@ -18,7 +18,7 @@
 
 .mainpage_bg {
     background: url("ubissimage/bg_sub000.png") no-repeat top center; /* 이미지가 가운데 정렬되며, 아래쪽에 위치 */
-    background-size: contain; /* 이미지가 화면에 맞춰 축소되도록 설정 (또는 필요에 따라 90% 등으로 설정) */
+    background-size: contain; /*이미지가 화면에 맞춰 축소되도록 설정 (또는 필요에 따라 90% 등으로 설정)*/
     height: 100vh; /* 전체 화면 높이 설정 */
     width: 100%; /* 전체 화면 너비 설정 */
     position: relative; /* 다른 요소들이 이 위에 겹칠 수 있도록 설정 */
@@ -30,7 +30,7 @@
     background: url("ubissimage/slide/11.jpg") no-repeat center bottom; /* 중앙 하단에 이미지 위치 설정 */
     background-size: contain; /* 이미지가 화면에 맞춰 축소되도록 설정 */
     width: 100%; /* 전체 화면 너비 설정 */
-    height: 66.9%; /* 하단에서부터 70% 높이 설정 */
+    height: 66.9vh; /* 하단에서부터 70% 높이 설정 */
     position: absolute; /* 하단에서부터 요소를 배치하도록 절대 위치 설정 */
     bottom: 0%; /* 화면 하단에서부터 시작 */
     z-index: 1; /* 다른 요소들이 배경 위에 표시되도록 설정 */
@@ -240,7 +240,7 @@
     max-width: auto ; /*1920px; /* 최대 너비 설정 */
     margin: 0 auto;
     padding-top: 5rem;
-    color: #333;      
+    /* color: #333;       */
 }
 
 .icons > li {
@@ -284,7 +284,7 @@
     opacity: 1; 
     height: auto;
     padding-top: -1rem;
-    color: inherit;
+    /* color: inherit; */
 }
 
 .footer > p {
