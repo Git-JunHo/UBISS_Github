@@ -275,7 +275,7 @@ ul > li:hover {
 .sub_title {
     width: 100%;
     height: 550px;
-    margin-top: -132px;
+    margin-top:-160px;
     background: rgb(227, 226, 226);
 }
 
@@ -947,6 +947,13 @@ ul > li:hover {
     animation-fill-mode: forwards;
 }
 
+.icon_img_employee{
+
+    width: 1500px;
+    height: 800px;
+
+}
+
 @keyframes back_change{
     0% {
         background:url(./image/bg_sub1.png);
@@ -971,57 +978,4 @@ ul > li:hover {
 
 }
 
-/* .slider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 50vh;
-  }
-
-  .slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50vh; */
-    /* background-size: cover;
-    background-position: center;
-    animation: slider 7.5s infinite linear; */
-  }
-
-
-  /* .slide:nth-child(1) {
-    background-image: url(./image/intro.png);
-    animation-delay: 0;
-  }
-  .slide:nth-child(2) {
-    background-image: url(./image/bg_sub1.png);
-    animation-delay: -2.5s; 
-  } */
-  /* .slide:nth-child(3) {
-    background-image: url(./images/img3.jpeg);
-    animation-delay: -5s;
-  } */
-  
-
-  /* @keyframes slider {
-    0% {
-      transform: translateX(0);
-    }
-  
-    26% {
-      transform: translateX(0);
-    }
-    33% {
-      transform: translateX(-100%);
-      animation-timing-function: step-end;
-    }
-    93% {
-      transform: translateX(100%);
-    }
-  
-    100% {
-      transform: translateX(0);
-    }
-  } */
   /* rio add */
